@@ -72,22 +72,5 @@ export const GlobalStyles = createGlobalStyle`
             line-height: 16px;
             opacity: 0.75;
         }
-
-        button.primary {
-            font-weight: 300;
-            font-size: 15px;
-            line-height: 19px;
-            text-align: center;
-            color: var(--pure-white);
-            background-color: var(--red);
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-        }
-
-        button.primary:hover {
-            color: var(--semi-dark-blue);
-            background-color: var(--pure-white);
-        }
     }
     `;
