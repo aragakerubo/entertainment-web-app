@@ -48,23 +48,25 @@ export const OptionsHolder = styled.div`
 		height: 20px;
 		text-decoration: none;
 	}
+
+	.options-link.active {
+		img {
+			filter: brightness(0) invert(1);
+		}
+
+		img:hover {
+			filter: brightness(0) invert(1);
+		}
+	}
 `;
 
 export const Option = styled.img`
 	width: 20px;
 	cursor: pointer;
 
-	&.active {
-		filter: brightness(0) invert(1);
-	}
-
 	&:hover {
 		filter: brightness(0) saturate(100%) invert(41%) sepia(8%)
 			saturate(6178%) hue-rotate(320deg) brightness(108%) contrast(116%);
-	}
-
-	&.active:hover {
-		filter: brightness(0) invert(1);
 	}
 `;
 

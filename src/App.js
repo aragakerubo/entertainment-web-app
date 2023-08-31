@@ -5,7 +5,6 @@ import { GlobalStyles } from "./GlobalStyles";
 import Home from "./pages/HomePage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
-import ErrorPage from "./pages/ErrorPage";
 
 import dataDump from "./data.json";
 
@@ -21,10 +20,9 @@ function App() {
 			<DataContext.Provider value={{ data, setData }}>
 				<BrowserRouter>
 					<Routes>
-						<Route path="/" element={<Home />} />
+						<Route path="*" element={<Home />} />
 						<Route path="/signup" element={<SignupPage />} />
 						<Route path="/login" element={<LoginPage />} />
-						<Route path="/*" element={<ErrorPage />} />
 					</Routes>
 				</BrowserRouter>
 			</DataContext.Provider>
