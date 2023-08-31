@@ -9,6 +9,8 @@ import MoviesSection from "../../components/MoviesSection";
 import ErrorPage from "../ErrorPage";
 
 import { Wrapper, Container, Holder } from "./HomePage.styles";
+import TVSeriesSection from "../../components/TVSeriesSection";
+import BookmarksSection from "../../components/BookmarksSection";
 
 export default function Home() {
 	return (
@@ -40,6 +42,33 @@ export default function Home() {
 										<MoviesSection />
 									</Holder>
 								</>
+							</>
+						}
+					/>
+					<Route
+						exact
+						path="/tv-series"
+						element={
+							<>
+								<>
+									<SearchBar placeholder="Search for TV series" />
+									<Holder>
+										<TVSeriesSection />
+									</Holder>
+								</>
+							</>
+						}
+					/>
+					<Route
+						exact
+						path="/bookmarks"
+						element={
+							<>
+								<SearchBar placeholder="Search for bookmarked shows" />
+								<Holder>
+									<BookmarksSection category="Movie" />
+									<BookmarksSection category="TV Series" />
+								</Holder>
 							</>
 						}
 					/>
