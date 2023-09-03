@@ -78,7 +78,7 @@ export default function SignupForm() {
 				<PrimaryButton buttonContent="Create an account" />
 				<p className="body-m">
 					Already have an account?{" "}
-					<Link to="/login" className="link">
+					<Link to="/entertainment-web-app/login" className="link">
 						Login
 					</Link>
 				</p>

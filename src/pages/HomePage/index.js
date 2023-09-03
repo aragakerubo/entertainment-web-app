@@ -6,7 +6,6 @@ import SearchBar from "../../components/SearchBar";
 import TrendingSection from "../../components/TrendingSection";
 import RecommendedSection from "../../components/RecommendedSection";
 import MoviesSection from "../../components/MoviesSection";
-import ErrorPage from "../ErrorPage";
 
 import { Wrapper, Container, Holder } from "./HomePage.styles";
 import TVSeriesSection from "../../components/TVSeriesSection";
@@ -20,7 +19,7 @@ export default function Home() {
 				<Routes>
 					<Route
 						exact
-						path="/"
+						path="home"
 						element={
 							<>
 								<SearchBar placeholder="Search for movies or TV series" />
@@ -33,7 +32,7 @@ export default function Home() {
 					/>
 					<Route
 						exact
-						path="/movies"
+						path="movies"
 						element={
 							<>
 								<>
@@ -47,7 +46,7 @@ export default function Home() {
 					/>
 					<Route
 						exact
-						path="/tv-series"
+						path="tv-series"
 						element={
 							<>
 								<>
@@ -61,7 +60,7 @@ export default function Home() {
 					/>
 					<Route
 						exact
-						path="/bookmarks"
+						path="bookmarks"
 						element={
 							<>
 								<SearchBar placeholder="Search for bookmarked shows" />
@@ -72,7 +71,6 @@ export default function Home() {
 							</>
 						}
 					/>
-					<Route path="/*" element={<ErrorPage />} />
 				</Routes>
 			</Container>
 		</Wrapper>

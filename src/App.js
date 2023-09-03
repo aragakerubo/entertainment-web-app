@@ -7,6 +7,7 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 
 import dataDump from "./data.json";
+import ErrorPage from "./pages/ErrorPage";
 
 export const DataContext = createContext();
 
@@ -20,9 +21,15 @@ function App() {
 			<DataContext.Provider value={{ data, setData }}>
 				<BrowserRouter>
 					<Routes>
-						<Route path="*" element={<Home />} />
-						<Route path="/signup" element={<SignupPage />} />
-						<Route path="/login" element={<LoginPage />} />
+						<Route
+							path="entertainment-web-app/*"
+							// element={<Home />}
+						>
+							<Route path="dashboard/*" element={<Home />} />
+							<Route path="signup" element={<SignupPage />} />
+							<Route path="login" element={<LoginPage />} />
+							<Route path="*" element={<ErrorPage />} />
+						</Route>
 					</Routes>
 				</BrowserRouter>
 			</DataContext.Provider>

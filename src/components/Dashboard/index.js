@@ -26,24 +26,27 @@ export default function Dashboard() {
 					<LogoIcon src={LogoImage} alt="Company Logo" />
 					<OptionsHolder>
 						<NavLink
-							to="/"
-							className={({ isActive, isPending }) =>
-								isPending
-									? "pending options-link"
-									: isActive
-									? "active options-link"
-									: "options-link"
-							}
+							to="/entertainment-web-app/dashboard/home"
+							className="options-link"
 						>
 							<Option src={HomeImage} alt="Home" />
 						</NavLink>
-						<NavLink to="/movies" className="options-link">
+						<NavLink
+							to="/entertainment-web-app/dashboard/movies"
+							className="options-link"
+						>
 							<Option src={MovieImage} alt="Movies" />
 						</NavLink>
-						<NavLink to="/tv-series" className="options-link">
+						<NavLink
+							to="/entertainment-web-app/dashboard/tv-series"
+							className="options-link"
+						>
 							<Option src={TVImage} alt="TV Series" />
 						</NavLink>
-						<NavLink to="/bookmarks" className="options-link">
+						<NavLink
+							to="/entertainment-web-app/dashboard/bookmarks"
+							className="options-link"
+						>
 							<Option src={BookmarksImage} alt="Bookmarks" />
 						</NavLink>
 					</OptionsHolder>

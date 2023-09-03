@@ -58,7 +58,7 @@ export default function LoginForm() {
 				<PrimaryButton buttonContent="Login to your account" />
 				<p className="body-m">
 					Don't have an account?{" "}
-					<Link to="/signup" className="link">
+					<Link to="/entertainment-web-app/signup" className="link">
 						Sign Up
 					</Link>
 				</p>
