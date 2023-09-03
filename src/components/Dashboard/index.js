@@ -25,26 +25,23 @@ export default function Dashboard() {
 				<Holder>
 					<LogoIcon src={LogoImage} alt="Company Logo" />
 					<OptionsHolder>
-						<NavLink
-							to="/entertainment-web-app/dashboard/home"
-							className="options-link"
-						>
+						<NavLink to="/dashboard/home" className="options-link">
 							<Option src={HomeImage} alt="Home" />
 						</NavLink>
 						<NavLink
-							to="/entertainment-web-app/dashboard/movies"
+							to="/dashboard/movies"
 							className="options-link"
 						>
 							<Option src={MovieImage} alt="Movies" />
 						</NavLink>
 						<NavLink
-							to="/entertainment-web-app/dashboard/tv-series"
+							to="/dashboard/tv-series"
 							className="options-link"
 						>
 							<Option src={TVImage} alt="TV Series" />
 						</NavLink>
 						<NavLink
-							to="/entertainment-web-app/dashboard/bookmarks"
+							to="/dashboard/bookmarks"
 							className="options-link"
 						>
 							<Option src={BookmarksImage} alt="Bookmarks" />

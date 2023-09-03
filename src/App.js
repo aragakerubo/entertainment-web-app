@@ -19,17 +19,12 @@ function App() {
 		<div>
 			<GlobalStyles />
 			<DataContext.Provider value={{ data, setData }}>
-				<BrowserRouter>
+				<BrowserRouter basename="/entertainment-web-app">
 					<Routes>
-						<Route
-							path="entertainment-web-app/*"
-							// element={<Home />}
-						>
-							<Route path="dashboard/*" element={<Home />} />
-							<Route path="signup" element={<SignupPage />} />
-							<Route path="login" element={<LoginPage />} />
-							<Route path="*" element={<ErrorPage />} />
-						</Route>
+						<Route path="dashboard/*" element={<Home />} />
+						<Route path="signup" element={<SignupPage />} />
+						<Route path="login" element={<LoginPage />} />
+						<Route path="*" element={<ErrorPage />} />
 					</Routes>
 				</BrowserRouter>
 			</DataContext.Provider>
