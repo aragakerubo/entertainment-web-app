@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { GlobalStyles } from "./GlobalStyles";
 import Home from "./pages/HomePage";
@@ -21,6 +21,10 @@ function App() {
 			<DataContext.Provider value={{ data, setData }}>
 				<BrowserRouter basename="/entertainment-web-app">
 					<Routes>
+                        <Route
+                            path="/"
+                            element={<Navigate to="/dashboard" replace />}
+                        />
 						<Route path="dashboard/*" element={<Home />} />
 						<Route path="signup" element={<SignupPage />} />
 						<Route path="login" element={<LoginPage />} />

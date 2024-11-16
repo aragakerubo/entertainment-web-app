@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Dashboard from "../../components/Dashboard";
 import SearchBar from "../../components/SearchBar";
@@ -17,6 +17,8 @@ export default function Home() {
 			<Dashboard />
 			<Container>
 				<Routes>
+                    {/* Redirect from /dashboard to /dashboard/home */}
+                    <Route path="/" element={<Navigate to="home" replace />} />
 					<Route
 						exact
 						path="home"
